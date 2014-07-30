@@ -17,7 +17,9 @@ CSS STRUCTURE:
 /* 1.  SITE STRUCTURE and TYPOGRAPHY */
 /*============================================================================================*/
 body {
-	background:#fff;
+	background:url(https://trello-attachments.s3.amazonaws.com/5205384d99dbd77e44003651/53d93e07b1ca672cee58a8da/2560x1705/908f17eb914a0c6b51f37257d52902cf/handcodednyc.png) no-repeat;
+    background-size:cover;
+    background-position: center center;
 	font:13px/20px 'Open Sans', Arial, sans-serif;
 	color: #333;
 	-webkit-font-smoothing: antialiased !important;
@@ -350,7 +352,7 @@ ul#footer-nav li {
 .ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; }
 
 #survey_container {
-	background-color:#fff;
+	background-color:rgba(255, 255, 255, 0.70);
 	 box-shadow: 0 0 5px #777;
 	 margin-top:0px;
 	 margin-bottom:30px;
@@ -445,6 +447,10 @@ input.form-control:focus, select.form-control:focus, textarea.form-control:focus
   color:#555;
 }
 
+textarea.form-control {
+height: auto !important;
+}
+
 /** Drop down select: ex Country select ==================== **/
 .styled-select select {
    background: transparent;
@@ -484,12 +490,19 @@ ul.floated li {
 	width:30%;
    } 
  label.label_gender {padding-left:50px; line-height:42px;}
+ ul.floated li label {padding-left:50px; line-height:42px;}
  
  ul.floated li#age {
 	 width:100px;
 	 margin-right:55px;
    } 
-   
+
+ ul.floated li#age {
+	 width:100px;
+	 margin-right:55px;
+   } 
+
+
 ul.data-list li {position:relative; } 
 
 ul.data-list-2 li {

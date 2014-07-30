@@ -55,7 +55,7 @@ function delayedRedirect(){
 						/*$subject = "".$_POST['subject'];*/
 						$to = "test@ansonika.com";
 						$subject = "Survey from ANNOVA";
-						$headers = "From: Survey from ANNOVA <noreply@yourdomain.com>";
+						$headers = "From: Survey from Manhattan Home Values <hello@digimix.us>";
 						$message = "USER INFO\n";
 						$message .= "\nName: " . $_POST['firstname'];
 						$message .= "\nLast Name: " . $_POST['lastname'];
@@ -79,10 +79,10 @@ function delayedRedirect(){
 						//Confirmation page
 						$user = "$mail";
 						$usersubject = "Thank You";
-						$userheaders = "From: info@annova.com\n";
+						$userheaders = "From: hello@digimix.us\n";
 						/*$usermessage = "Thank you for your time. Your survey is successfully submitted.\n"; WITH OUT SUMMARY*/
 						//Confirmation page WITH  SUMMARY
-						$usermessage = "Thank you for your time. Your survey is successfully submitted.\n\nBELOW A SUMMARY\n\n$message"; 
+						$usermessage = "Thank you for your time. Your home valuation request is successfully submitted.\n\nBELOW A SUMMARY\n\n$message"; 
 						mail($user,$usersubject,$usermessage,$userheaders);
 	
 ?>
@@ -92,7 +92,8 @@ function delayedRedirect(){
 <div class="row">
         <div class=" col-md-12" style="text-align:center; padding-top:80px;">
          	<h1 style="color:#333">Thank you!</h1>
-          <h3 style="color: #6C3">Form Successfully Submitted.</h3>
+          <h3 style="color: #6C3">Valuation Request Successfully Submitted.</h3>
+          <p>You will receive your home valuation via email whin the next 24hrs.</p>
          <p>You will be redirect back in 5 seconds.</p>
         </div>
 </div>

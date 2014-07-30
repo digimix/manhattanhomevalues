@@ -63,32 +63,14 @@
 
 <body>
 
-	<header>
-         <div class="container">
-            <div class="row">
-        	<div class="col-md-4 col-xs-3" id="logo"><a href="index.html">Manhattan Home Values</a></div>
-            
-            <div class="btn-responsive-menu"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </div>
-
-            <nav class="col-md-8 col-xs-9" id="top-nav">
-            	<ul>
-                    <li><a href="#" data-toggle="modal" data-target="#myModal">About</a></li>
-                    <li><a href="#" id="purchase">Find the value of your NYC home</a></li>
-               </ul>
-            </nav><!-- End Nav -->
-            
-         </div><!-- End row -->
-         </div><!-- End container -->
-        </header> <!-- End header -->
-        	
-            <div class="container">
-             <div class="row">
-                 <div class="col-md-12 main-title">
-                 <h1>Manhattan Home Values</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 main-title">
+                <h1>Manhattan Home Values</h1>
                 <p>Find the value of your Manhattan home for free.</p>
-                </div>
-       		</div>
             </div>
+        </div>
+    </div>
 
 <section class="container" id="main">
 
@@ -105,16 +87,14 @@
 		<div id="middle-wizard">
 			<div class="step">
 				<div class="row">
-					<h3 class="col-md-10">Enter your contact info</h3>
-					<div class="col-md-6">
+					<h3 class="col-md-10">Enter the property's address</h3>
+					<div class="col-md-12">
 						<ul class="data-list">
-							<li><input type="text" name="firstname" class="required form-control" placeholder="First name"></li>
-							<li><input type="text" name="lastname" class="required form-control" placeholder="Last name"></li>
-							<li><input type="email" name="email" class="required form-control" placeholder="Your Email"></li>
+							<li><input type="text" name="address" class="required form-control" placeholder="Address"></li>
 						</ul>
-					</div><!-- end col-md-6 -->
+					</div><!-- end col-md-12 -->
                     
-					<div class="col-md-6">
+<!-- 					<div class="col-md-6">
                     
 						<ul class="data-list">
 							<li>
@@ -146,10 +126,56 @@
 							<li><input name="gender" type="radio" class="required check_radio" value="Female"><label class="label_gender"> Female</label></li>
 						</ul>
                         
-					</div><!-- end col-md-6 -->
+					</div><!-- end col-md-6 --> 
 				</div><!-- end row -->
                 
+                
+<!-- 				<div class="row">
+					<div class="col-md-12">
+						<ul class="data-list floated clearfix">
+							<li id="beds"><input type="text" name="beds" class="required form-control" placeholder="Beds"></li>
+							<li id="baths"><input type="text" name="baths" class="required form-control" placeholder="Baths"></li>
+							<li id="sf"><input type="text" name="sf" class="required form-control" placeholder="Apprx SF"></li>
+							<li id="proptype"><input type="text" name="proptype" class="required form-control" placeholder="Property Type"></li>
+						</ul>
+					</div>
+				</div>
+ -->
 				<div class="row">
+					<div class="col-md-3">
+						<ul class="data-list">
+							<li id="beds"><input type="text" name="beds" class="required form-control" placeholder="Beds"></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="data-list">
+							<li id="baths"><input type="text" name="baths" class="required form-control" placeholder="Baths"></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="data-list">
+							<li id="sf"><input type="text" name="sf" class="required form-control" placeholder="Apprx SF"></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="data-list">
+							<li id="proptype">
+                                <div class="styled-select">
+                                    <select class="form-control required" name="proptype">
+                                        <option value="" selected>Property Type</option>
+                                        <option value="Condo">Condo</option>
+                                        <option value="Coop">Coop</option>
+                                        <option value="Townhouse">Townhouse</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </li>
+						</ul>
+					</div>
+				</div>
+                
+                
+<!-- 				<div class="row">
 					<div class="col-md-4 col-md-offset-4">
 						<ul class="data-list" id="terms">
 							<li>
@@ -166,22 +192,50 @@
 						</ul>
 					</div>
 				</div>
-                
+                 -->
 			</div><!-- end step-->
             
-			<div class="step row">
-				<div class="col-md-10">
-					<h3>Please rate your overall satisfaction about the service provided.</h3>
-					<ul class="data-list-2">
-						<li><input name="rate" type="radio" class="required check_radio" value="Not Satisfied"><label>Not Satisfied</label></li>
-						<li><input name="rate" type="radio" class="required check_radio" value="Quite Satisfied"><label>Quite Satisfied</label></li>
-						<li><input name="rate" type="radio" class="required check_radio" value="Satisfied"><label>Satisfied</label></li>
-						<li><input name="rate" type="radio" class="required check_radio" value="Completely Satisfied"><label>Completely Satisfied</label></li>
-					</ul>
-				</div>
+			<div class="step">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h3>Please give us a little more information.</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+						<ul class="data-list-2">
+							<li><textarea rows="7" name="propcondition" class="required form-control" placeholder="Please tell us in your own words what condition the property is currently in..."></textarea></li>
+						</ul>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="data-list-2">
+							<li><input type="text" name="firstname" class="required form-control" placeholder="First name"></li>
+							<li><input type="text" name="lastname" class="required form-control" placeholder="Last name"></li>
+							<li><input type="email" name="email" class="required form-control" placeholder="Your Email"></li>
+						</ul>                        
+                    </div>                    
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>When are you looking to sell your home?</h3>
+                        <ul class="data-list floated clearfix">
+                            <li><input name="rate" type="radio" class="required check_radio" value="0-3 months"><label>0-3 months</label></li>
+                            <li><input name="rate" type="radio" class="required check_radio" value="3-6 months"><label>3-6 months</label></li>
+                            <li><input name="rate" type="radio" class="required check_radio" value="6-12 months"><label>6-12 months</label></li>
+                            <li><input name="rate" type="radio" class="required check_radio" value="looking to refinace"><label>looking to refinace</label></li>
+                            <li><input name="rate" type="radio" class="required check_radio" value="other"><label>other</label></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                
+                
+                
+                
+                
 			</div><!-- end step -->
             
-			<div class="step row">
+<!-- 			<div class="step row">
 				<div class="col-md-10">
 					<h3>How did you hear about our company?</h3>
 					<ul class="data-list-2">
@@ -191,9 +245,9 @@
 						<li><input name="question_1[]" type="checkbox" class="required check_radio" value="Newspaper"><label>Newspaper</label></li>
 					</ul>
 				</div>
-			</div><!-- end step -->
+			</div>--><!-- end step -->
             
-			<div class="step row">
+<!-- 			<div class="step row">
 				<div class="col-md-10">
 					<h3>Do you think to suggest our company to a friend or parent?</h3>
 					<ul class="data-list-2 clearfix">
@@ -204,12 +258,12 @@
 						<li><strong>In no, please describe with few words why</strong><textarea name="message_suggest_no" class="form-control"></textarea></li>
 					</ul>
 				</div>
-			</div><!-- end step -->
+			</div><!-- end step --> -->
             
 			<div class="submit step" id="complete">
                     	<i class="icon-check"></i>
 						<h3>Survey complete! Thank you for you time.</h3>
-						<button type="submit" name="process" class="submit">Submit the survey</button>
+						<button type="submit" name="process" class="submit">Get Valuation</button>
 			</div><!-- end submit step -->
             
 		</div><!-- end middle-wizard -->
@@ -257,29 +311,20 @@
   	</section>
     
     <section id="footer_2">
-    <div class="container">
-    <div class="row">
-    	<div class="col-md-6">
-                <ul id="footer-nav">
-                	<li>© 2014 Manhattan Home Values</li>
-                    <li>Designed by DigiMix. <a href="#">New York Web Development Company</a></li>
-                    <li><a href="#">Privacy</a></li>
-                </ul>              
-        </div>
-            <div class="col-md-6" style="text-align:center">
-                <ul class="social-bookmarks clearfix">
-                    <li class="facebook"><a href="#">facebook</a></li>
-                    <li class="googleplus"><a href="#">googleplus</a></li>
-                    <li class="twitter"><a href="#">twitter</a></li>
-                    <li class="delicious"><a href="#">delicious</a></li>
-                    <li class="paypal"><a href="#">paypal</a></li>
-                </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul id="footer-nav">
+                        <li>© 2014 Manhattan Home Values</li>
+                        <li>Designed by DigiMix. <a href="#">New York Web Development Company</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>              
+                </div>
             </div>
-        </div>
 		</div>
     </section>
 
-</footer> 
+</footer>
  
  <div id="toTop">Back to Top</div>  
 
