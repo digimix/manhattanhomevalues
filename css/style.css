@@ -17,13 +17,21 @@ CSS STRUCTURE:
 /* 1.  SITE STRUCTURE and TYPOGRAPHY */
 /*============================================================================================*/
 body {
-	background:url(https://trello-attachments.s3.amazonaws.com/5205384d99dbd77e44003651/53d93e07b1ca672cee58a8da/2560x1705/908f17eb914a0c6b51f37257d52902cf/handcodednyc.png) no-repeat;
-    background-size:cover;
-    background-position: center center;
-	font:13px/20px 'Open Sans', Arial, sans-serif;
+	background:
+    linear-gradient(
+      rgba(232, 232, 232, 0.75), 
+      rgba(232, 232, 232, 0.75)
+    ),    
+    url(https://trello-attachments.s3.amazonaws.com/5205384d99dbd77e44003651/53d93e07b1ca672cee58a8da/2560x1705/908f17eb914a0c6b51f37257d52902cf/handcodednyc.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    font:13px/20px 'Open Sans', Arial, sans-serif;
 	color: #333;
 	-webkit-font-smoothing: antialiased !important;
 }
+
 /** Typography **/
 h1,
 h2,
@@ -50,6 +58,11 @@ h1,h2 {
 	font-size:44px;
 	line-height:40px;
 	margin-top:70px;
+    color:#244B6D;
+}
+.main-title {
+text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+color: #282828;
 }
 .main-title p {
 	font-size:26px;
@@ -346,14 +359,14 @@ ul#footer-nav li {
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {}
 .ui-widget-content { background: #fff; color: #222222; }
 .ui-widget-content a { color: #222222; }
-.ui-widget-header {background: #f68e56; }
+.ui-widget-header {background: #49BAE7; }
 .ui-widget-header a { color: #222222; }
 .ui-progressbar { height:2em; text-align: left; }
 .ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; }
 
 #survey_container {
-	background-color:rgba(255, 255, 255, 0.70);
-	 box-shadow: 0 0 5px #777;
+	background-color:rgba(255, 255, 255, 0.90);
+	 box-shadow: 0 0 5px rgba(119, 119, 119, 0.51);
 	 margin-top:0px;
 	 margin-bottom:30px;
 	 z-index:9;
@@ -423,7 +436,7 @@ input.form-control, select.form-control, textarea.form-control {
 	background:none;
 	background-color:#fbfbfb;
 	border:2px solid #d5d5d5;
-	border-radius: 0;
+	border-radius: 0px;
 	 -webkit-appearance: none;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
@@ -734,7 +747,7 @@ ul.floated li {
 @media (max-width: 480px) {
 
 .main-title h1{font-size:24px;line-height:26px; margin-top:30px;}
-.main-title p {font-size:14px; ine-height:16px; }
+.main-title p {font-size:14px; line-height:16px; }
 
 #top-nav ul	{float: none; padding:20px 0 40px 0; margin:0; } 
 #top-wizard {padding:15px 30px;}

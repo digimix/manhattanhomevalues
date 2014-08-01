@@ -7,9 +7,9 @@
 
 <!-- Basic Page Needs -->
 <meta charset="utf-8">
-<title>Survey Responsive Template</title>
+<title>Manhattan Home Values</title>
 <meta name="description" content="">
-<meta name="author" content="Ansonika">
+<meta name="author" content="DigiMix">
 
 <!-- Favicons-->
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
@@ -53,7 +53,7 @@ function delayedRedirect(){
 						$mail = $_POST['email'];
 
 						/*$subject = "".$_POST['subject'];*/
-						$to = "test@ansonika.com";
+						$to = "mike.salafia@gmail.com";
 						$subject = "Survey from ANNOVA";
 						$headers = "From: Survey from Manhattan Home Values <hello@digimix.us>";
 						$message = "USER INFO\n";

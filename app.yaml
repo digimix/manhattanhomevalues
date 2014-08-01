@@ -6,8 +6,8 @@ api_version: 1
 handlers:
 - url: /css
   static_dir: css
-- img: /img
-  static_dir: /img	
+- url: /img
+  static_dir: img
 
 - url: /.*
   script: index.html
