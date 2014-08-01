@@ -48,7 +48,7 @@ function delayedRedirect(){
 </script>
 
 </head>
-<body onLoad="setTimeout('delayedRedirect()', 15000)">
+<body onLoad="setTimeout('delayedRedirect()', 5000)">
 <?php
 						$mail = $_POST['email'];
 
@@ -60,12 +60,19 @@ function delayedRedirect(){
 						$message .= "\nName: " . $_POST['firstname'];
 						$message .= "\nLast Name: " . $_POST['lastname'];
 						$message .= "\nEmail: " . $_POST['email'];
-						$message .= "\nBeds: " . $_POST['beds'];
-						$message .= "\nBaths: " . $_POST['baths'];
-						$message .= "\nSf: " . $_POST['sf'];
-						$message .= "\nProperty Type: " . $_POST['proptype'];
-						$message .= "\nProperty condition: " . $_POST['propcondition'];
-						$message .= "\nSelling in: " . $_POST['rate'];
+						$message .= "\nCountry: " . $_POST['country'];
+						$message .= "\nHow many children: " . $_POST['quantity'];
+						$message .= "\nAge: " . $_POST['age'];
+						$message .= "\nGender: " . $_POST['gender'];
+						$message .= "\nTerms and conditions: " . $_POST['terms'] . "\n";
+						$message .= "\nOverall satisfaction value: " . $_POST['rate'] . "\n";
+						$message .= "\nHow did you heard about our company?\n" ;
+						foreach($_POST['question_1'] as $value) 
+							{ 
+							$message .=   "- " .  trim(stripslashes($value)) . "\n"; 
+							};
+						$message .= "\nDo you think to suggest our company to a friend or parent?: " . $_POST['question_2'];
+						$message .= "\nOptional message: " . $_POST['message_suggest_no'];
 						//Receive Variable
 						$sentOk = mail($to,$subject,$message,$headers);
 						
@@ -84,9 +91,10 @@ function delayedRedirect(){
 <div class="container">
 <div class="row">
         <div class=" col-md-12" style="text-align:center; padding-top:80px;">
-         	<h1 style="color:#333">Your home valuation request has been successfully submitted.</h1>
-          <h2>You will receive your an email with your home valuation whin the next 24hrs.</h2>
-         <p>You will be redirect back in 15 seconds.</p>
+         	<h1 style="color:#333">Thank you!</h1>
+          <h3 style="color: #6C3">Valuation Request Successfully Submitted.</h3>
+          <p>You will receive your home valuation via email whin the next 24hrs.</p>
+         <p>You will be redirect back in 5 seconds.</p>
         </div>
 </div>
 </div>
